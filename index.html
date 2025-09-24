@@ -8,10 +8,66 @@
 </head>
 <body>
     <header>
-        <!-- Implement navigation here -->
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-list" id="nav-list">
+                <a href="#navigation" class="nav-link">Navigation</a>
+                <a href="#drag-drop" class="nav-link">Drag & Drop</a>
+                <a href="#blog-list" class="nav-link">Blog List</a>
+            </div>
+        </nav>
     </header>
     <main>
-        <!-- Implement your solution here -->
+        <section class="navigation" id="navigation">
+            <h2>Navigation Component</h2>
+            <p>This section demonstrates the sticky navigation with intersectionObserver</p>
+            <p id="scroll-info">Scroll to see the navigation update and highlight the current section.</p>
+        </section>
+        
+        <h2>Drag & Drop Demo</h2>
+        <section class="drag-drop-container" id="drag-drop">
+            <div class="draggable-list" id="draggable-list">
+                <div id="item1" class="draggable-item" data-original="true">Item 1</div>
+                <div id="item2" class="draggable-item" data-original="true">Item 2</div>
+                <div id="item3" class="draggable-item" data-original="true">Item 3</div>
+            </div>
+            <div class="drop-zones">
+                <div class="drop-zone" id="drop-zone-1">
+                    <span class="drop-zone-label">Drop Here</span>
+                </div>
+                <div class="drop-zone" id="drop-zone-2">
+                    <span class="drop-zone-label">Drop Here</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="blog-list-container" id="blog-list">
+            <div class="blog-list-controls">
+                <select id="filter1" aria-label="Sort blogs by">
+                    <option value="date">Date</option>
+                    <option value="readingTime">Reading Time</option>
+                    <option value="category">Category</option>
+                </select>
+                <select id="filter2" aria-label="Filter blogs by category">
+                    <option value="all">All Categories</option>
+                    <option value="writing">Writing</option>
+                    <option value="gadgets">Gadgets</option>
+                    <option value="startups">Startups</option>
+                    <option value="ai">AI</option>
+                    <option value="health">Health</option>
+                    <option value="fintech">Fintech</option>
+                    <option value="security">Security</option>
+                    <option value="apps">Apps</option>
+                    <option value="work">Work</option>
+                    <option value="tech">Tech</option>
+                    <option value="enterprise">Enterprise</option>
+                    <option value="growth">Growth</option>
+                </select>
+                <input type="text" id="search" placeholder="Search by title" aria-label="Search blogs by title">
+            </div>
+            <div class="blog-list-viewport">
+                <div class="blog-list-content"></div>
+            </div>
+        </section>
     </main>
     <script type="module" src="src/js/main.js"></script>
 </body>
