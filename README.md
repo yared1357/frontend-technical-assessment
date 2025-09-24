@@ -24,3 +24,4 @@
 ### And use this to test 
 - npm install -g http-server
 - http-server
+- http://192.168.100.45:8080  use this like not  http://127.0.0.1:8080 to test
